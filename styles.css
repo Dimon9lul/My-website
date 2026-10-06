@@ -1,102 +1,172 @@
+:root {
+  --primary-bg-color: #f4f4f9;
+  --box-background-color: #2970b8;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: var(--primary-bg-color);
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    background-color: #2970b8;
-    color: white;
-    padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #2970b8;
+  color: var(--primary-bg-color);
+  padding: 50px 0;
 }
 
 .profile-info {
-    max-width: 800px;
-    align-content: center;
-    gap: 500px;
-    font-size: 150%;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  justify-content: center;
+  gap: 8px;
+  font-size: 150%;
 }
 
 .profile-picture {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    margin: 20px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 20px;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    color: #ecf0f1;
+  font-size: 1.2em;
+  color: var(--primary-bg-color);
 }
 
 main {
-    padding: 30px 10%;
+  padding: 30px 8vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-self: center;
+  align-content: center;
 }
 
 section {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.sideways-arrange {
+  display: flex;
+  flex-wrap: wrap; /* Added to handle wrapping */
+  gap: 20px;
 }
 
 .project-box {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+  align-self: center;
+  background-color: var(--primary-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  flex: 1 0 calc(50% - 20px); /* Adjusted for responsiveness */
 }
 
 .project-box:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 footer {
-    text-align: center;
-    background-color: #ecf0f1;
-    color: #333;
-    padding: 20px 0;
-    margin-top: auto;
+  text-align: center;
+  background-color: #ecf0f1;
+  color: #333;
+  padding: 20px 0;
+  margin-top: auto;
+  width: 100%;
+  flex-basis: 100%;
 }
 
 .social-icons a {
-    display: inline-block;
-    margin: 0 15px;
-    width: 40px;
-    height: 40px;
+  display: inline-block;
+  margin: 0 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.project-image {
+  border-radius: 8px;
+  max-width: 300px; /* Adjusted for responsiveness */
+  height: auto;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-    .profile-picture {
-        width: 150px;
-        height: 150px;
-    }
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
 
-    h2 {
-        font-size: 1.5em;
-    }
+  h2 {
+    font-size: 1.5em;
+  }
 
+  .project-box {
+    padding: 15px;
+    flex: 1 0 calc(100% - 20px); /* Adjusted for small screens */
+  }
+
+  .profile-info {
+    font-size: 110%;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 30px 0;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .project-box {
+    flex: 1 0 calc(50% - 20px); /* Adjusted for medium screens */
+  }
+}
+
+@media (min-width: 2000px) {
     .project-box {
-        padding: 15px;
+        flex: 1 0 calc(25% - 20px)
     }
 
-    .profile-info {
-        font-size: 110%;
+    main {
+      padding: 30px 8vw;
     }
 }
