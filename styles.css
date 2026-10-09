@@ -31,6 +31,7 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   background-color: var(--box-background-color);
@@ -46,6 +47,10 @@ header {
   justify-content: center;
   gap: 8px;
   font-size: 200%;
+}
+
+.profile-info p {
+  margin-left: 20px;
 }
 
 h1 {
@@ -134,9 +139,13 @@ footer {
   flex-basis: 100%;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
 .social-icons a,img{
-  display: inline-block;
-  margin: 0 15px;
   width: 40px;
   height: 40px;
 }
@@ -148,7 +157,21 @@ footer {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 532px) {
+  p {
+    text-align: center;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+
+  .profile-info p {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 835px) {
   .profile-picture {
     width: 150px;
     height: 150px;
@@ -193,3 +216,4 @@ footer {
       padding: 30px 8vw;
     }
 }
+
