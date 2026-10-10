@@ -10,7 +10,40 @@
 <body>
     <header>
         <div id="profile-picture-wrapper">
-            <img src="https://avatars.githubusercontent.com/u/175857108?v=4" alt="Profile Picture" class="profile-picture">
+            <svg width="94%" height="94%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="30" fill="#074b8f"/>
+                <image xlink:href="https://avatars.githubusercontent.com/u/175857108?v=4" x="19" y="19" width="62" clip-path="inset(4% 4% round 100%)"/>
+                <circle cx="50" cy="50" r="40" style="fill:none;stroke:#666666;"/>
+                <!-- Left circle: -->
+                <g transform="translate(50,50)">
+                    <circle cx="0" cy="0" r="8" style="fill: #f4f4f9;"/>
+                    <image xlink:href="images/python.svg" x="-6" y="-6" width="12"/>
+                    <animateMotion path="m 10,50 a 40,40 0 1 1 80,0 a 40,40 0 1 1 -80,0" dur="6s" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="scale" values="1;0.8;1;1.2;1" keyTimes="0;0.25;0.5;0.75;1" dur="6s" repeatCount="indefinite"/>
+                </g>
+                <!-- Upper circle: -->
+                <g>
+                    <circle cx="0" cy="0" r="8" style="fill: #f4f4f9;"/>
+                    <image xlink:href="images/python.svg" x="-6" y="-6" width="12"/>
+                    <animateMotion path="m 50,10 a -40,40 0 1 1 0,80 a 40,40 0 1 1 0,-80" dur="6s" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="scale" values="0.8;1;1.2;1;0.8" keyTimes="0;0.25;0.5;0.75;1" dur="6s" repeatCount="indefinite"/>
+                </g>
+                <!-- Lower circle: -->
+                <g>
+                    <circle cx="0" cy="0" r="8" style="fill: #f4f4f9;"/>
+                    <image xlink:href="images/python.svg" x="-6" y="-6" width="12"/>
+                    <animateMotion path="m 50,90 a 40,-40 0 1 1 0,-80 a -40,40 0 1 1 0,80" dur="6s" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="scale" values="1.2;1;0.8;1;1.2" keyTimes="0;0.25;0.5;0.75;1" dur="6s" repeatCount="indefinite"/>
+                </g>
+                <!-- Right circle: -->
+                <g>
+                    <circle cx="0" cy="0" r="8" style="fill: #f4f4f9;"/>
+                    <image xlink:href="images/python.svg" x="-6" y="-6" width="12"/>
+                    <animateMotion path="m 90,50 a -40,-40 0 1 1 -80,0 a -40,-40 0 1 1 80,0" dur="6s" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="scale" values="1;1.2;1;0.8;1" keyTimes="0;0.25;0.5;0.75;1" dur="6s" repeatCount="indefinite"/>
+                </g>
+            </svg>
+            <!-- <img src="https://avatars.githubusercontent.com/u/175857108?v=4" alt="Profile Picture" class="profile-picture"> -->
         </div>
         <div class="profile-info">
             <h1>Dimon9lul</h1>

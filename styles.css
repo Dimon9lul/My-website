@@ -36,8 +36,8 @@ header {
   align-content: center;
   background-color: var(--box-background-color);
   color: var(--primary-bg-color);
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .profile-info {
@@ -55,6 +55,14 @@ header {
 
 h1 {
   font-size: 200%;
+}
+
+#profile-picture-wrapper {
+  display: flex;
+  width: 16em;
+  height: 16em;
+  justify-content: center;
+  align-content: center;
 }
 
 .profile-picture {
@@ -157,7 +165,7 @@ footer {
   margin-bottom: 10px;
 }
 
-@media (max-width: 532px) {
+@media (max-width: 560px) {
   p {
     text-align: center;
   }
@@ -171,7 +179,7 @@ footer {
   }
 }
 
-@media (max-width: 835px) {
+@media (max-width: 875px) {
   .profile-picture {
     width: 150px;
     height: 150px;
@@ -188,6 +196,11 @@ footer {
   .profile-info {
     font-size: 110%;
   }
+
+  #profile-picture-wrapper {
+    width: 13em;
+    height: 13em;
+  }
 }
 
 @media (max-width: 400px) {
@@ -198,6 +211,11 @@ footer {
   .profile-picture {
     width: 120px;
     height: 120px;
+  }
+
+  #profile-picture-wrapper {
+    width: 11em;
+    height: 11em;
   }
 }
 
