@@ -117,6 +117,7 @@ h2 {
   background-color: var(--box-background-color);
   background-position-x: center;
   background-position-y: center;
+  background-size: cover;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -124,10 +125,26 @@ h2 {
   flex: 1 0 calc(50% - 20px); /* Adjusted for responsiveness */
 }
 
+.project-title {
+  font-size: larger;
+}
+
+.hidden-span {
+  display: none;
+}
+
+.visible-span {
+  display: inline;
+}
+
+a {
+  color: var(--box-background-color);
+}
+
 .project-box-content {
   background-color: var(--primary-bg-color);
   margin-top: 200px;
-  padding: 4px;
+  padding: 10px;
   border-color: var(--contrast-color);
   border-top: 5px;
   align-self:flex-end;
@@ -135,6 +152,14 @@ h2 {
 
 .project-box:hover {
   transform: translateY(-5px);
+}
+
+.project-description:hover .hidden-span {
+  display: inline;
+}
+
+.project-description:hover .visible-span {
+  display: none;
 }
 
 footer {
