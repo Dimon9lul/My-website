@@ -1,7 +1,7 @@
 :root {
   --primary-bg-color: #f4f4f9;
   --box-background-color: #318fee;
-  --contrast-color: #000000;
+  --contrast-color: #d3d9db;
 }
 
 * {
@@ -84,7 +84,7 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-self: center;
   align-content: center;
   max-width: 80%;
@@ -94,17 +94,53 @@ section {
   margin-bottom: 50px;
 }
 
-#principles ul {
+.tech-stack-items {
   justify-self: center;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-stack-items div {
+  border: 2px solid var(--contrast-color);
+  border-radius: 5px;
+  padding: 3px;
+  margin: 5px;
+  background-color: var(--contrast-color);
+  font-size: large;
   font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8em;
+}
+
+#principles {
+  text-align: center;
+}
+
+
+#principles ul {
+  justify-self: center;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ol {
+  justify-self: center;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+ul, ol {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 
 .sideways-arrange {
@@ -146,9 +182,8 @@ a {
   background-color: var(--primary-bg-color);
   margin-top: 200px;
   padding: 10px;
-  border-color: var(--contrast-color);
-  border-top: 5px;
-  align-self:flex-end;
+  border-top: 4px solid var(--box-background-color);
+  align-self: flex-end;
 }
 
 .project-box:hover {
@@ -165,7 +200,7 @@ a {
 
 footer {
   text-align: center;
-  background-color: #ecf0f1;
+  background-color: var(--contrast-color);
   color: #333;
   padding: 20px 0;
   margin-top: auto;
